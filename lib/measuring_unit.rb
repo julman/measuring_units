@@ -1,5 +1,6 @@
 class Measuring_Unit
   attr_reader :unit_name, :unit_amount
+  attr_writer :unit_name, :unit_amount
   def initialize(amount)
     @unit_amount = amount
   end
@@ -7,8 +8,6 @@ class Measuring_Unit
   def to_s
     return "#{@unit_amount} #{plurlize()}"
   end
-
-
 
   def plurlize
     if(@unit_amount!=1)
